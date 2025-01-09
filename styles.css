@@ -1,0 +1,127 @@
+:root {
+  --font-family: 'Play', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column; /* Cambiamos la dirección del eje principal a vertical */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: rgb(52, 0, 90);
+  font-family: var(--font-family);
+
+  /*
+  background-image: radial-gradient(white 1px, transparent 1px), radial-gradient(white 1px, transparent 1px);
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
+  */
+}
+
+.player-turn {
+  text-align: center;
+  margin-bottom: 10px; /* Agregamos margen inferior */
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.8); /* Agregamos un fondo semitransparente */
+  padding: 5px 10px; /* Agregamos espacio interno */
+  border-radius: 5px; /* Agregamos bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agregamos una sombra suave */
+
+  display: flex;
+  flex-direction: row; /* Cambiamos la dirección del eje principal a horizontal */
+  align-items: center; /* Centramos verticalmente los elementos */
+  justify-content: space-between; /* Alinear los elementos en los extremos */
+  width: 570;
+}
+
+.player-turn p{
+  margin: 5;
+  padding-right: 25px;
+}
+
+#restartButton {
+  margin-left: 10px; /* Agregamos un margen entre el cuadro y el botón */
+  font-size: 16px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border: none;
+  background-color: #f39c12;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  width: fit-content; /* Ajusta el ancho al contenido */
+  margin-right: 5px;
+}
+
+#restartButton:hover {
+  background-color: #e67e22;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(7, 70px); /* Ajustamos el tamaño de las columnas */
+  grid-template-rows: repeat(6, 70px); /* Ajustamos el tamaño de las filas */
+  gap: 10px; /* Aumentamos el espacio entre celdas */
+  border: 3px solid rgb(20, 0, 34);
+  background-color: #5c00c5;
+  padding: 20px; /* Agregamos margen interno alrededor del tablero */
+}
+
+.cell {
+  width: 60px; /* Tamaño de las celdas más pequeño */
+  height: 60px; /* Tamaño de las celdas más pequeño */
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px; /* Aumentamos el tamaño de la fuente dentro de las celdas */
+}
+
+.cell:hover {
+  background-color: #ddd;
+}
+
+.chip {
+  width: 50px; /* Reducimos el tamaño de las fichas */
+  height: 50px; /* Reducimos el tamaño de las fichas */
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+
+
+.dialog {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  padding: 20px;
+  text-align: center;
+}
+
+.dialog .message {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.dialog button {
+  font-size: 1em;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.dialog button:hover {
+  background-color: #0056b3;
+}
