@@ -1,3 +1,5 @@
+![Preview](public/connect4.webp)
+
 # Connect Four
 
 The **Connect Four** game for two players! This project was built using **HTML**, **CSS**, and **JavaScript** to recreate the classic strategy game in a digital format.
